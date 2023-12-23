@@ -29,9 +29,8 @@ setInterval(() => {
 //Start.
 
 l({
-    appState: JSON.parse((process.env.c3c))
-}, (err, api) => {
-  if (err) return console.log(err)
+  appstate: 
+  JSON.parse(fs.createReadStream("./kira.json"))
   
 api.setOptions(option)
   
