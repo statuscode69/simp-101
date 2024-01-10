@@ -29,8 +29,9 @@ setInterval(() => {
 //Start.
 
 l({
-  appstate: 
-  JSON.parse(fs.createReadStream("./kira.json"))
+  appState: JSON.parse(fs.readFileSync('./kira.json'))
+}, (err, api) => {
+  if (err) return console.log(err)
   
 api.setOptions(option)
   
